@@ -40,7 +40,13 @@ public class Tabuleiro {
         numConf = numAtaque;
     }
     
-    
+    public void imprimir() {
+        System.out.print("[ ");
+        for (int i = 0; i < tabuleiro.length; i++) {
+            System.out.print(tabuleiro[i] + " ");
+        }
+        System.out.println("]");
+    }
     
     public int[] getTabuleiro() {
         return tabuleiro;

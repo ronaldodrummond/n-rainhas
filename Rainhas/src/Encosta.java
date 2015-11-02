@@ -1,13 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author ronaldo
- */
 public class Encosta {
+    Tabuleiro atual, prox, melhorResult;
+    int n;
+    
+    public Encosta(Tabuleiro atual) {
+        n = atual.getTamanho();
+        this.atual = atual;
+        melhorResult = atual;
+    }
+    
     
 }
