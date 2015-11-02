@@ -21,5 +21,51 @@ public class Tabuleiro {
            tabuleiro[i] = (int)(Math.random()*(tamanho)+1);
         }
     }
+
+    public void conflitos() {
+        int numAtaque = 0;
+        int atual;
+        int anterior;
+        int i, j;
+        for (i = 0; i < tamanho - 1; i++) {
+            anterior = tabuleiro [i];
+            for (j=1; j < tamanho; j++) {
+                atual = tabuleiro [i];
+                int dif = j - i;
+                if((atual == anterior) || (atual == anterior + dif) || (atual == anterior - dif)) {
+                    numAtaque++;
+                }
+            }    
+        }
+        numConf = numAtaque;
+    }
+    
+    
+    
+    public int[] getTabuleiro() {
+        return tabuleiro;
+    }
+
+    public void setTabuleiro(int[] tabuleiro) {
+        this.tabuleiro = tabuleiro;
+    }
+
+    public int getNumConf() {
+        return numConf;
+    }
+
+    public void setNumConf(int numConf) {
+        this.numConf = numConf;
+    }
+
+    public int getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
+    }
+    
+    
     
 }
