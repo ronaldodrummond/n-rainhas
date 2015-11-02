@@ -20,7 +20,7 @@ public class Executar {
         switch (op){
             case 1:
                 encosta = new Encosta(tabuleiro);
-                //encosta.executeEncosta(); 
+                encosta.executar(); 
                 break;
             case 2:
                 genetico = new Genetico(tamanho);

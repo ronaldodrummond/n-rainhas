@@ -1,16 +1,6 @@
 
 import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author ronaldo
- */
 public class Genetico {
     private ArrayList<Tabuleiro> populacao = new ArrayList<>();
     int n;
@@ -29,15 +19,15 @@ public class Genetico {
             pop.add(i, tab);
         }
         
-        System.out.println("\n Algoritmo Genético \n");
-        System.out.println("\n População \n");
+        System.out.println("\nAlgoritmo Genético \n");
+        System.out.println("\nPopulação \n");
         
         for (int i = 0; i < n; i++) {
             System.out.print("\nPopulação "+ i + " [ ");
             for (int j = 0; j < n; j++) {
                 System.out.print(pop.get(i).getTabuleiro()[j] + " ");
             }
-            System.out.println("] \n Conflitos: " + pop.get(i).getNumConf());
+            System.out.println("] \nConflitos: " + pop.get(i).getNumConf());
         }
         
         return pop;        
@@ -82,14 +72,14 @@ public class Genetico {
         selecionados.add(menor1);
         selecionados.add(menor2);
         
-        System.out.println("\n Indivíduos Selecionados \n");
+        System.out.println("\nIndivíduos Selecionados \n");
         
         for (int i = 0; i < selecionados.size(); i++) {
             System.out.print("\nSelecionados "+ i + " [ ");
             for (int j = 0; j < n; j++) {
                 System.out.print(selecionados.get(i).getTabuleiro()[j] + " ");
             }
-            System.out.println("] \n Conflitos: " + selecionados.get(i).getNumConf());
+            System.out.println("] \nConflitos: " + selecionados.get(i).getNumConf());
         }
         
         return selecionados;
@@ -108,7 +98,7 @@ public class Genetico {
         aux1.conflitos();
         aux2.conflitos();
         
-        System.out.println("\n Crossover \n");
+        System.out.println("\nCrossover \n");
         System.out.println("Pai 1: ");
         pais.get(0).imprimir();
         System.out.println("Pai 2: ");
@@ -167,6 +157,5 @@ public class Genetico {
     public void setN(int n) {
         this.n = n;
     }
-    
     
 }
