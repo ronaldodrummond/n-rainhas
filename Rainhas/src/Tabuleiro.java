@@ -1,13 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author ronaldo
- */
 public class Tabuleiro {
     private int[] tabuleiro;
     private int numConf;
@@ -29,7 +19,7 @@ public class Tabuleiro {
         int i, j;
         for (i = 0; i < tamanho - 1; i++) {
             anterior = tabuleiro [i];
-            for (j=1+i; j < tamanho; j++) {
+            for (j=i+1; j < tamanho; j++) {
                 atual = tabuleiro [j];
                 int dif = j - i;
                 if((atual == anterior) || (atual == anterior + dif) || (atual == anterior - dif)) {

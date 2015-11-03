@@ -19,8 +19,8 @@ public class Genetico {
             pop.add(i, tab);
         }
         
-        System.out.println("\nAlgoritmo Genético \n");
-        System.out.println("\nPopulação \n");
+        System.out.print("\n*Algoritmo Genético*\n");
+        System.out.print("\nPopulação \n");
         
         for (int i = 0; i < n; i++) {
             System.out.print("\nPopulação "+ i + " [ ");
@@ -72,7 +72,7 @@ public class Genetico {
         selecionados.add(menor1);
         selecionados.add(menor2);
         
-        System.out.println("\nIndivíduos Selecionados \n");
+        System.out.print("\nIndivíduos Selecionados \n");
         
         for (int i = 0; i < selecionados.size(); i++) {
             System.out.print("\nSelecionados "+ i + " [ ");
