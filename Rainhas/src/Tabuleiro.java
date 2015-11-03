@@ -29,8 +29,8 @@ public class Tabuleiro {
         int i, j;
         for (i = 0; i < tamanho - 1; i++) {
             anterior = tabuleiro [i];
-            for (j=1; j < tamanho; j++) {
-                atual = tabuleiro [i];
+            for (j=1+i; j < tamanho; j++) {
+                atual = tabuleiro [j];
                 int dif = j - i;
                 if((atual == anterior) || (atual == anterior + dif) || (atual == anterior - dif)) {
                     numAtaque++;
