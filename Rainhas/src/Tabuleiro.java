@@ -53,7 +53,9 @@ public class Tabuleiro {
     }
 
     public void setTabuleiro(int[] tabuleiro) {
-        this.tabuleiro = tabuleiro;
+        for (int i = 0; i < tabuleiro.length; i++) {
+            this.tabuleiro[i] = tabuleiro[i];
+        }
     }
 
     public int getNumConf() {
@@ -71,7 +73,5 @@ public class Tabuleiro {
     public void setTamanho(int tamanho) {
         this.tamanho = tamanho;
     }
-    
-    
-    
+  
 }
